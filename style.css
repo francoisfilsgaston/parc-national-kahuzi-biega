@@ -1,0 +1,411 @@
+@font-face {
+    font-family: popins;
+    src: url("../assets/font_family/Poppins-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: popins, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* pousser le footer vers le bas */
+main.content {
+    flex: 1;
+    padding: 30px 0;
+}
+
+/* ==============HEADER================== */
+header {
+    background-color: rgb(19, 186, 227);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    height: 70px;
+
+}
+
+/* ================Navbar=============== */
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navlink a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #089111;
+    transition: all 0.3s ease;
+}
+
+.navlink a:hover {
+    color: rgb(198, 12, 12);
+    text-decoration: underline;
+}
+
+/* ====================MAIN==================== */
+.content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =================PAGE ACCUEIL=========================== */
+
+/* --------------------section hero--------------- */
+.hero {
+    height: 600px;
+    background: linear-gradient(rgba(0, 0, 0, .45),
+            rgba(0, 0, 0, .45)),
+        url("./assets/images/kahuzi.jpg");
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.hero-container h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.hero-container p {
+    text-align: center;
+    font-size: 22px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ----------------------section presentation-------------- */
+.presentation {
+    padding: 80px 0;
+}
+
+.presentation .container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.presentation-image img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 50px;
+}
+
+.presentation-texte {
+    flex: 1;
+}
+
+.presentation-texte p {
+    font-size: 1.3rem;
+    text-align: justify;
+}
+
+.presentation-texte a {
+    font-size: 1.3rem;
+    color: rgb(6, 166, 6);
+    text-decoration: none;
+}
+
+.presentation-texte a:hover {
+    text-decoration: underline;
+    color: rgb(8, 201, 250);
+}
+
+/* -------------------statistiques------------------------- */
+.stats {
+    padding: 70px 0;
+    background: white;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.start-card {
+    background: #e8f5e9;
+    padding: 35px;
+    text-align: center;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.start-card:hover {
+    transform: translateY(-10px);
+}
+
+.start-card h3 {
+    font-size: 45px;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.start-card p {
+    font-size: 18px;
+}
+
+/* -----------------------Activités------------------------ */
+.activites {
+    padding: 80px 0;
+    background: #f5f5f5;
+}
+
+.activites h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #1b5e20;
+    margin-bottom: 40px;
+}
+
+.activites-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 15px;
+}
+
+.activity-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+    transition: .4s;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .25);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.activity-card img:hover {
+    transform: scale(1.1);
+}
+
+.activity-content {
+    padding: 25px;
+}
+
+.activity-content h3 {
+    font-size: 25px;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.activity-content p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.all-activities-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.all-activities-btn a {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #2e7d32;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.all-activities-btn a:hover {
+    background: #1b5e20;
+    transform: translateY(-3px);
+}
+
+/* -------------Page de l'activite------------------ */
+.activities-header {
+    height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, .45),
+            rgba(0, 0, 0, .45)),
+        url("./assets/images/kiki.jpg");
+    background-size: cover;
+    display: flex;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.activities-header h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.activities-header p {
+    text-align: center;
+    font-size: 22px;
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ---------------Popup dans l'activité------------------ */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    cursor: pointer;
+}
+
+.popup-content {
+    background: white;
+    width: 600px;
+    max-width: 90%;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    animation: popup .3s ease;
+    cursor: auto;
+}
+
+.popup-content img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.popup-content h2 {
+    color: #1b5e20;
+    margin: 20px 0;
+}
+
+.popup-content p {
+    line-height: 1.7;
+}
+
+.close {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #333;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* ------------------section Recherche----------------------- */
+
+.search-section {
+    padding: 60px 0;
+    background: #e8f5e9;
+    text-align: center;
+
+}
+
+.search-section h2 {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.search-box {
+    background: white;
+    width: 600px;
+    max-width: 90%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .15);
+}
+
+.search-box input {
+    border-radius: 50px;
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 15px 25px;
+    font-size: 20px;
+}
+
+.search-box button {
+    border: none;
+    outline: none;
+    background: white;
+    border-radius: 50px;
+    font-size: 30px;
+    padding: 15px 20px;
+    color: #089111;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==============Footer================= */
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
