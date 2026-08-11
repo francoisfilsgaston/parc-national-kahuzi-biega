@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Poppins, Arial, sans-serif;
+    background: linear-gradient(135deg,
+            #e8f3ff,
+            #f5f7fb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.connexion-container {
+    width: 100%;
+    max-width: 450px;
+}
+
+.connexion-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .10);
+
+}
+
+.connexion-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.connexion-header h1 {
+    color: #1d3557;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.connexion-header p {
+    color: #777;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: .3s;
+}
+
+.form-group input:focus {
+    border-color: #1877F2;
+    box-shadow: 0 0 0 3px rgba(24, 119, 242, .10);
+
+}
+
+.btn-connexion {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #1877F2;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-connexion:hover {
+    background: #0d5ed7;
+}
+
+.message {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.message.error {
+    color: #dc3545;
+}
+
+.message.success {
+    color: #198754;
+}
+
+.inscription-link {
+    text-align: center;
+    margin-top: 25px;
+    color: #777;
+}
+
+.inscription-link a {
+    display: inline-block;
+    margin-top: 5px;
+    color: #1877F2;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.inscription-link a:hover {
+    text-decoration: underline;
+}
+
+@media(max-width:500px) {
+    .connexion-card {
+        padding: 25px;
+    }
+
+    .connexion-header h1 {
+        font-size: 27px;
+    }
+}

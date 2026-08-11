@@ -1,0 +1,177 @@
+@font-face {
+    font-family: poppins;
+    src: url("../assets/font_family/Poppins-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: poppins;
+    box-sizing: border-box;
+
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            #eef5ff,
+            #f8fbff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.inscription-container {
+    width: 100%;
+    max-width: 470px;
+}
+
+.inscription-card {
+    background: white;
+    width: 100%;
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+.inscription-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.logo {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1877f2;
+    color: white;
+    font-size: 25px;
+}
+
+
+.inscription-header h1 {
+    color: #1d3557;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+
+.inscription-header p {
+    color: #777;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #ddd;
+    border-radius: 11px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.25s;
+}
+
+.form-group input:focus {
+    border-color: #1877f2;
+    box-shadow: 0 0 0 3px rgba(24, 119, 242, 0.10);
+}
+
+.form-group input::placeholder {
+    color: #aaa;
+}
+
+.message {
+    min-height: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+
+}
+
+.message.success {
+    color: #198754;
+}
+
+.message.error {
+    color: #dc3545;
+}
+
+.btn-inscription {
+    width: 100%;
+    border: none;
+    padding: 14px;
+    border-radius: 11px;
+    background: #1877f2;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.2s;
+}
+
+.btn-inscription:hover {
+    background: #0d65d9;
+    transform: translateY(-1px);
+}
+
+.btn-inscription:active {
+    transform: translateY(0);
+}
+
+.connexion-link {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 22px;
+    border-top: 1px solid #eee;
+}
+
+
+.connexion-link p {
+    color: #777;
+    margin-bottom: 8px;
+}
+
+.connexion-link a {
+    color: #1877f2;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.connexion-link a:hover {
+    text-decoration: underline;
+}
+
+/* responsive */
+@media (max-width: 500px) {
+    body {
+        padding: 15px;
+    }
+
+    .inscription-card {
+        padding: 28px 22px;
+        border-radius: 18px;
+    }
+
+    .inscription-header h1 {
+        font-size: 25px;
+    }
+}

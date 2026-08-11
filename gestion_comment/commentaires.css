@@ -1,0 +1,265 @@
+@font-face {
+    font-family: poppins;
+    src: url("../assets/font_family/Poppins-Regular.ttf");
+}
+
+* {
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f7fb;
+    font-family: Poppins, sans-serif;
+    color: #333;
+}
+
+.commentaire-page {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+
+}
+
+header nav {
+    margin-bottom: 25px;
+}
+
+header nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #1877F2;
+    font-size: 17px;
+    font-weight: 600;
+
+}
+
+header nav a:hover {
+    color: #0d5ed7;
+}
+
+
+.activite-details {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+    margin-bottom: 35px;
+
+}
+
+.activite-details img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    display: block;
+}
+
+.activite-info {
+    padding: 30px;
+}
+
+.activite-info h1 {
+    color: #1d3557;
+    margin-bottom: 15px;
+}
+
+.activite-info p {
+    line-height: 1.8;
+    color: #555;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+
+}
+
+.activite-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 25px 0;
+    color: #666;
+}
+
+.activite-meta span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+}
+
+.activite-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.like-btn {
+    border: none;
+    background: #f0f2f5;
+    color: #666;
+    padding: 12px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 16px;
+}
+
+.like-btn i {
+    margin-right: 8px;
+}
+
+.like-btn:hover {
+    background: #e6e9ef;
+}
+
+.like-btn.liked {
+    color: #1877F2;
+}
+
+.like-btn.active {
+    background: #1877F2;
+    color: white;
+}
+
+.comment-info {
+    font-weight: 600;
+    color: #555;
+}
+
+
+.commentaires-section {
+    background: #fff;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+}
+
+.commentaires-section h2 {
+    margin-bottom: 25px;
+    color: #1d3557;
+}
+
+.commentaire {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    background: #f8f9fb;
+    padding: 18px;
+    border-radius: 15px;
+    margin-bottom: 18px;
+}
+
+.commentaire-gauche {
+    flex: 1;
+    min-width: 0;
+}
+
+.commentaire strong {
+    display: block;
+    color: #1877F2;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.commentaire p {
+    margin: 10px 0;
+    line-height: 1.7;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.commentaire small {
+    color: #888;
+}
+
+.delete-comment {
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #999;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.delete-comment:hover {
+    color: red;
+}
+
+/* AJOUT COMMENTAIRE */
+.form-commentaire {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+
+textarea {
+    width: 100%;
+    min-height: 110px;
+    max-height: 220px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: poppins;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+
+.cmt-btn-pub {
+    align-self: flex-end;
+    padding: 12px 30px;
+    background: #1877F2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cmt-btn-pub:hover {
+    background: green;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px) {
+    .commentaire-page {
+        padding: 15px;
+    }
+
+    .activite-details img {
+        height: 240px;
+    }
+
+    .activite-info {
+        padding: 20px;
+    }
+
+    .activite-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .commentaire {
+        flex-direction: column;
+    }
+
+    .delete-comment {
+        align-self: flex-end;
+    }
+
+}
