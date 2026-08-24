@@ -4,23 +4,6 @@ include "includes/header.php";
 
 <main class="content">
 
-    <section class="index-hero">
-        <div class="hero-overlay">
-            <h1>Découvrez les merveuilles de Parc National de Kahuzi Biega</h1>
-            <p>
-                Une aventure exceptionnelle entre montagnes,
-                forets tropicales et gorilles de Grauer.
-            </p>
-            <p>
-
-                Un patrimoine naturel exceptionnel situé
-                dans la province du Sud-Kivu, en République
-                démocratique du Congo.
-            </p>
-        </div>
-
-    </section>
-
     <section class="index-section">
         <div class="index-text">
             <span class="section-label">

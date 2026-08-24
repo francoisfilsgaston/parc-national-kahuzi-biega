@@ -1,38 +1,6 @@
 // URL de l'API
 const API = "http://localhost:8000/api_tourisme/api/";
 
-// CHARGER LES ACTIVITÉS
-
-fetch(API + "activites.php?parc_id=1").then(response => response.json()).then(result => {
-    console.log(result);
-    const container = document.getElementById("activitiesContainer");
-    const allActivitBtn = document.getElementById("allActivitiesBtn");
-    if (!container || !allActivitBtn) {
-        return;
-    }
-    if (!result.success) {
-        container.innerHTML = "<p>Aucune activité trouvée.</p>";
-        return;
-    }
-    container.innerHTML = "";
-    result.data.slice(4, 7).forEach(activity => {
-        container.innerHTML += `
-            <div class="activity-card">
-                <img src="assets/images/${activity.image}" alt="${activity.titre}">
-                <div class="activity-content">
-                    <h3>${activity.titre}</h3>
-                    <p>${activity.description}</p>
-                    </div>
-                </div>
-            `;
-    });
-    allActivitBtn.innerHTML += `
-            <a href="activite.php">Voir toutes les activités</a>
-        `;
-}).catch(error => {
-    console.error(error);
-});
-
 // =================================
 // PAGE ACTIVITES
 // =================================
@@ -238,8 +206,7 @@ if (contactForm) {
 
 
         // envoyer a L'API
-        fetch(
-            API + "contact.php", {
+        fetch(API + "contact.php", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -249,42 +216,25 @@ if (contactForm) {
                 message: message
             })
         }
-        ).then(
-            response => response.json()
-        ).then(
-            result => {
-                console.log(
-                    "Réponse contact :",
-                    result
-                );
-                if (
-                    result.success
-                ) {
-                    responseMessage.textContent = result.message;
-                    responseMessage.classList.add(
-                        "success"
-                    );
+        ).then(response => response.json()).then(result => {
+            console.log("Réponse contact :", result);
+            if (result.success) {
+                responseMessage.textContent = result.message;
+                responseMessage.classList.add("success");
 
-                    // Vider le formulaire
-                    contactForm.reset();
-                }
-                else {
-                    responseMessage.textContent = result.message;
-                    responseMessage.classList.add(
-                        "error"
-                    );
-                }
+                // Vider le formulaire
+                contactForm.reset();
             }
+            else {
+                responseMessage.textContent = result.message;
+                responseMessage.classList.add("error");
+            }
+        }
         ).catch(
             error => {
-                console.error(
-                    "Erreur contact :",
-                    error
-                );
+                console.error("Erreur contact :", error);
                 responseMessage.textContent = "Impossible de contacter le serveur.";
-                responseMessage.classList.add(
-                    "error"
-                );
+                responseMessage.classList.add("error");
             }
         );
     }

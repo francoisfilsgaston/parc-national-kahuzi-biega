@@ -13,35 +13,23 @@ if (inscriptionForm) {
         const nom = document.getElementById("nom").value.trim();
         const email = document.getElementById("email").value.trim();
         const password = document.getElementById("password").value;
-        const confirmPassword = document.getElementById(
-            "confirmPassword"
-        ).value;
+        const confirmPassword = document.getElementById("confirmPassword").value;
 
 
         message.textContent = "";
         message.className = "message";
 
         if (password !== confirmPassword) {
-            message.textContent =
-                "Les mots de passe ne correspondent pas.";
-
-            message.classList.add(
-                "error"
-            );
+            message.textContent = "Les mots de passe ne correspondent pas.";
+            message.classList.add("error");
             return;
         }
 
         if (password.length < 6) {
-
-            message.textContent =
-                "Le mot de passe doit contenir au moins 6 caractères.";
-            message.classList.add(
-                "error"
-            );
+            message.textContent = "Le mot de passe doit contenir au moins 6 caractères.";
+            message.classList.add("error");
             return;
         }
-
-
 
         // envoyer a l'API
         fetch(API + "inscription.php", {
@@ -57,17 +45,11 @@ if (inscriptionForm) {
         }
         ).then(response => response.json()).then(
             result => {
-                console.log(
-                    "Réponse inscription :",
-                    result
-                );
+                console.log("Réponse inscription :", result);
 
                 if (result.status === "success") {
-                    message.textContent =
-                        result.message;
-                    message.classList.add(
-                        "success"
-                    );
+                    message.textContent = result.message;
+                    message.classList.add("success");
 
                     // Vider le formulaire
                     inscriptionForm.reset();
@@ -82,22 +64,14 @@ if (inscriptionForm) {
                 }
                 else {
                     message.textContent = result.message;
-                    message.classList.add(
-                        "error"
-                    );
+                    message.classList.add("error");
                 }
             }
         ).catch(error => {
-            console.error(
-                "Erreur inscription :",
-                error
-            );
+            console.error("Erreur inscription :", error);
 
             message.textContent = "Impossible de contacter le serveur.";
-            message.classList.add(
-                "error"
-            );
-
+            message.classList.add("error");
         }
         );
     }

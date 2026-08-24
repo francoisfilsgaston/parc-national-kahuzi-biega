@@ -19,7 +19,6 @@ if (empty($data['email']) || empty($data['password'])) {
     exit();
 }
 
-
 // Nettoyer les données
 $email = trim($data['email']);
 $password = $data['password'];
